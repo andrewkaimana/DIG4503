@@ -1,0 +1,1 @@
+This is a bulbasaur and its ID is 1
