@@ -10,7 +10,7 @@ class Market extends Component {
     };
 
     render() {
-
+        //this will give user a button to click on that adds 1 to "count" every time it is clicked
         return(
             <div>
                 <MarketItem count={this.state.count}/>
