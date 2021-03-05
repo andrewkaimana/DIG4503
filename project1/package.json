@@ -1,16 +1,16 @@
 {
-  "name": "lab1",
+  "name": "project1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrew Kaimana",
   "license": "ISC",
   "dependencies": {
-    "boxen": "^5.0.0",
+    "axios": "^0.21.1",
     "chalk": "^4.1.0",
-    "start": "^5.1.0"
+    "extends-classes": "^1.0.5"
   }
 }

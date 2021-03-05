@@ -1,5 +1,13 @@
 import React from 'react';
 
+/*const style = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Arial"
+};
+style={style}*/
+
 class HomePage extends React.Component {
 
     render(fname){
