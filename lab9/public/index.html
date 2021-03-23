@@ -1,0 +1,91 @@
+<html>
+<body>
+    <script>
+        function readAge(event) {
+            event.preventDefault();    //prevents default function
+            
+            let element = document.querySelector("#age");  //equal to whatever is put into "age form"
+
+            fetch("/ages/" + element.value)     //instead of typing into search bar, type in form
+            .then((res) => {
+                return res.json(); //create json object, otherwise will only say if it was successful or not
+            })
+
+            .then((processed) => {
+                let reporting = document.querySelector("#reportingArea");   //processed info displayed in reportingArea
+
+                if(processed.error) {   //if error, do this
+                    reporting.innerHTML = processed.error;
+                }
+                else {
+                    reporting.innerHTML = processed.name;
+                }
+            });
+        }
+
+        function readName(event) {
+            event.preventDefault();
+
+            let element = document.querySelector("#name");
+
+            fetch("/employees/" + element.value)
+            .then((res) => {
+                return res.json();
+            })
+            .then((processed) => {
+                let reporting = document.querySelector("#reportingArea");
+
+                if(processed.error) {
+                    reporting.innerHTML = processed.error;
+                }
+                else {
+                    reporting.innerHTML = processed.age;
+                }
+            });
+        }
+
+        function createEmployee(event) {
+            event.preventDefault();
+
+            let name = document.querySelector("#employeeName");
+            let age = document.querySelector("#employeeAge");
+
+            fetch("/employees/" + name.value + "/" + age.value, {
+                "method": "post"
+            }).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                console.log(processed);
+            });
+        }
+    </script>
+
+    <h2>Age</h2>
+
+        <form onsubmit="readAge(event)">  <!--onsubmit, do this-->
+            <input id="age" type="text">
+            <button>Submit</button>
+        </form>
+
+    <h2>Name</h2>
+
+        <form onsubmit="readName(event)">
+            <input id="name" type="text">
+            <button>Submit</button>
+        </form>
+
+    <hr>    <!--horizontally divides content-->
+
+    <form onsubmit="createEmployee(event)">
+        <input id="employeeName" type="text">
+        <input id="employeeAge" type="text">
+        <button>Submit</button>
+    </form>
+
+    <hr>
+
+    <h2>Reporting</h2>  <!--this is where information appears-->
+    <div id="reportingArea"></div>
+
+</body>
+</html>
