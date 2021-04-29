@@ -1,12 +1,4 @@
 import React from 'react';
-/*import './style.css';*/
-import styled from 'styled-components';
-
-const Button = styled.button`
-    backgroundColor: palevioletred;
-    color: #fff;
-    padding: 0px;
-`;
 
 class NameSearch extends React.Component {
     readName(event) {
@@ -38,9 +30,7 @@ class NameSearch extends React.Component {
 
                 <form onSubmit={this.readName}>
                     <input id="name" type="text"/>
-                    <Button>
-                        Submit
-                    </Button>
+                    <button>Submit</button>
                 </form>
             </div>
         )
