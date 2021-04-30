@@ -1,5 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const Button = styled.button`
+    background-color: #16384e;
+    color: #cedcec;
+    padding: 2px;
+`;
+
+const Title = styled.h2`
+    color: #46b2f8;
+    text-align: center;
+    `;
+    
 class AgeSearch extends React.Component {
     readAge(event) {
         event.preventDefault();    //prevents default function
@@ -27,12 +39,12 @@ class AgeSearch extends React.Component {
     render() {
         return (
             <div>
-                <h2>Age</h2>
+                <Title>Age</Title>
 
-                    <form onSubmit={this.readAge}>
-                        <input id="age" type="text"/>
-                        <button>Submit</button>
-                    </form>
+                <form onSubmit={this.readAge}>
+                    <input id="age" type="text"/>
+                    <Button>Submit</Button>
+                </form>
             </div>
         )
     }

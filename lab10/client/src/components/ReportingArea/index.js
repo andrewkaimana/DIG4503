@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h2`
-    color: white;
+    color: #cedcec;
     text-align: center;
-    background: rgb(37, 150, 190);
-    background-width: 100px;
+    background-color: #2e75a3;
+    padding: 10px;
     `;
 
 class ReportingArea extends React.Component {

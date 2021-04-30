@@ -1,12 +1,16 @@
 import React from 'react';
-/*import './style.css';*/
 import styled from 'styled-components';
 
 const Button = styled.button`
-    backgroundColor: palevioletred;
-    color: #fff;
-    padding: 0px;
+    background-color: #16384e;
+    color: #cedcec;
+    padding: 2px;
 `;
+
+const Title = styled.h2`
+    color: #2e75a3;
+    text-align: center;
+    `;
 
 class NameSearch extends React.Component {
     readName(event) {
@@ -34,13 +38,11 @@ class NameSearch extends React.Component {
     render() {
         return(
             <div>
-                <h2>Name</h2>
+                <Title>Name</Title>
 
                 <form onSubmit={this.readName}>
                     <input id="name" type="text"/>
-                    <Button>
-                        Submit
-                    </Button>
+                    <Button>Submit</Button>
                 </form>
             </div>
         )
