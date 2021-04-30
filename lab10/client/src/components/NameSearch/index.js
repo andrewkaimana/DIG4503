@@ -1,12 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'; //able to use styled in order to style elements
 
+//style of submit button
 const Button = styled.button`
     background-color: #16384e;
     color: #cedcec;
     padding: 2px;
 `;
 
+//style of "Name"
 const Title = styled.h2`
     color: #2e75a3;
     text-align: center;

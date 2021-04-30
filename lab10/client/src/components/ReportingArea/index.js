@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//changes the color of text and the background
 const Title = styled.h2`
     color: #cedcec;
     text-align: center;
